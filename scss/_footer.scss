@@ -1,0 +1,91 @@
+.footer {
+    color: rgb(255, 255, 255);
+    background-color: rgb(180, 226, 247);
+    height: auto;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 2rem;
+
+    div {
+        div {
+            div {
+                a {
+                    .iconos {
+                        color: rgb(202, 99, 164);
+                        font-size: 60px;
+                        display: inline-block;
+                        align-items: center;
+                        padding: 1rem;
+                        &:hover{
+                            color: rgb(255, 255, 255) !important;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    div{
+        .contactoFooter{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+            li{
+                a{
+                    color:rgb(202, 99, 164);
+                    font-weight: 800;
+                    &:hover{
+                        color:  rgb(255, 255, 255);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    .contenedorCreditos {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .creditos {
+            p{
+                color:rgb(255, 255, 255);
+                &:hover{
+                    color:  rgb(202, 99, 164);
+                    font-weight: 700;
+                }
+            }
+                
+               
+        }
+        
+    }
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width:768px) {
+    .footer {
+        div {
+            div {
+                div {
+                    a {
+                        .iconos {
+                            font-size: 35px;
+                            padding-top: 10px;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedorCreditos {
+            padding-top: 0rem;
+        }
+    }
+}

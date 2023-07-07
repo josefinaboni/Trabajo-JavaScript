@@ -1,0 +1,47 @@
+.header {
+    background-color: rgb(229, 242, 230);
+    position: sticky;
+    z-index: 1020;
+    top: 0;
+    bottom: 0;
+    nav {
+        div {
+            a {
+                .logo {
+                    width: (100px);
+                }
+            }
+
+            div {
+                ul {
+                    li {
+                        .linkNav {
+                            color: $color-texto !important;
+                            text-decoration: none;
+                            font-weight: 800;
+                            font-size: 1, 75rem;
+                            
+                        &:hover{
+                            color: rgb(255, 255, 255) !important;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:768px) {
+    .header {
+        nav {
+            div {
+                a {
+                    .logo {
+                        width: (50px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+
+@mixin flexbox($justificacion,$alineacion,$direction,$alto,){
+    display:flex;
+    justify-content:$justificacion;
+    align-items: $alineacion;
+    flex-direction: $direction;
+    height:$alto;
+
+}
+@mixin flexboxSinH($justificacion,$alineacion,$direction,){
+    display:flex;
+    justify-content:$justificacion;
+    align-items: $alineacion;
+    flex-direction: $direction;
+}
+

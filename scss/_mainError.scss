@@ -1,0 +1,82 @@
+.mainError {
+    background-image: url(../assets/img/fondo\ titulo.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    height: 100vh;
+
+    .contenedorTituloError {
+        @include flexbox (center, center, column, 100%);
+        
+
+        h1 {
+            color: $color-titulo;
+            font-size: $tamano-titulo;
+        }
+
+        h2 {
+            color: $color-titulo;
+            font-size: $tamano-titulo;
+        }
+
+        a {
+            color: $color-titulo;
+            font-weight: map-get($fuentes, bold);
+            font-size: 20px;
+            
+
+            &:hover {
+                color: rgb(164, 196, 167);
+            }
+        }
+
+
+        .iconoError {
+            animation: rotating 2s linear;
+    animation-iteration-count: infinite;
+            color: rgb(202, 99, 164);
+            font-size: 100px;
+            margin-top: 10rem;
+            @keyframes rotating{
+                to {
+                    transform: rotate(360deg);
+                }
+            
+            }
+        }
+       
+
+
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width:768px) {
+.mainError {
+    background-image: url(../assets/img/fondo\ titulo\ copia.jpg);
+    
+    .contenedorTituloError {
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+           
+            font-size: 15px;
+        }
+
+        a {
+            font-size: 15px;
+        }
+
+
+        .iconoError {
+            font-size: 50px;
+        }
+       
+
+
+    }
+
+}
+}

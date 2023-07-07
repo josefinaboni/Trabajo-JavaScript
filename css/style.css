@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resaltado {
+  font-weight: 700;
+  color: rgb(164, 196, 167);
+}
+
+.resaltadoP {
+  font-weight: 700;
+}
+
+.body {
+  background-color: rgb(229, 242, 230);
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  background-color: rgb(229, 242, 230);
+  position: sticky;
+  z-index: 1020;
+  top: 0;
+  bottom: 0;
+}
+.header nav div a .logo {
+  width: 100px;
+}
+.header nav div div ul li .linkNav {
+  color: rgb(202, 99, 164) !important;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1, 75rem;
+}
+.header nav div div ul li .linkNav:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .header nav div a .logo {
+    width: 50px;
+  }
+}
+main section .contenedorTituloIndex, main section .contenedorTituloContacto, main section .contenedorTituloConsultorio, main section .contenedorTituloNosotros, main section .contenedorTituloQue {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  margin-bottom: 1rem;
+  background-image: url(../assets/img/fondo2\ index.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-position: center;
+}
+main section .contenedorTituloIndex h1, main section .contenedorTituloContacto h1, main section .contenedorTituloConsultorio h1, main section .contenedorTituloNosotros h1, main section .contenedorTituloQue h1 {
+  font-weight: 900;
+  padding: 8rem;
+  font-size: 50px;
+}
+main .contenedorTextoIndex {
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorTextoIndex h2 {
+  font-weight: 300;
+  font-size: 20px;
+}
+main div .tarjetas {
+  height: auto !important;
+}
+main div .tarjetas img {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+main div .tarjetas h3 {
+  color: rgb(202, 99, 164);
+  font-weight: 700;
+}
+main div .tarjetas p {
+  color: rgb(164, 196, 167);
+  font-size: 15px;
+}
+main div .tarjetas a {
+  color: rgb(202, 99, 164);
+  font-weight: 700;
+}
+main div .tarjetas a:hover {
+  color: rgb(164, 196, 167);
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main section .contenedorTituloIndex, main section .contenedorTituloContacto, main section .contenedorTituloConsultorio, main section .contenedorTituloNosotros, main section .contenedorTituloQue {
+    height: 30vh;
+    background-image: url(../assets/img/fondo2\ indexMobile.jpg);
+    background-attachment: initial;
+  }
+  main section .contenedorTituloIndex h1, main section .contenedorTituloContacto h1, main section .contenedorTituloConsultorio h1, main section .contenedorTituloNosotros h1, main section .contenedorTituloQue h1 {
+    font-weight: 300;
+    padding: 8rem;
+    font-size: 25px;
+  }
+  main .contenedorTextoIndex h2 {
+    font-size: 15px;
+  }
+}
+main section .contenedorTituloQue {
+  background-image: url(../assets/img/fondoQETO2.jpg);
+}
+main section .contenedorTituloQue h1 {
+  font-weight: 900;
+  padding: 8rem;
+  font-size: 50px;
+}
+main .contenedorAnimaciones {
+  overflow: hidden;
+}
+main .contenedorAnimaciones .containterPrimerCaja {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+main .contenedorAnimaciones .containterPrimerCaja div .columnaIzquierdaPrimerCaja {
+  background-image: url(../assets/img/card1.jpg);
+  object-fit: fill;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja p {
+  font-weight: 300;
+  font-size: 15px;
+}
+main .contenedorAnimaciones section div .columnaIzquierdaSegundaCaja {
+  background-image: url(../assets/img/card2.jpg);
+  object-fit: fill;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .contenedorAnimaciones section div .columnaDerechaSegundaCaja {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorAnimaciones section div .columnaDerechaSegundaCaja h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+main .contenedorAnimaciones section div .columnaDerechaSegundaCaja ul {
+  font-weight: 300;
+  font-size: 15px;
+}
+main .contenedorAnimaciones .containerTercerCaja {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+main .contenedorAnimaciones .containerTercerCaja div .columnaIzquierdaTercerCaja {
+  background-image: url(../assets/img/card3.jpeg);
+  object-fit: contain;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja ol {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main section .contenedorTituloQue {
+    height: 30vh;
+    background-image: url(../assets/img/fondoQETO2\ copia.jpg);
+  }
+  main section .contenedorTituloQue h1 {
+    font-weight: 300;
+    padding: 8rem;
+    font-size: 25px;
+  }
+  main .contenedorAnimaciones .containterPrimerCaja div .columnaIzquierdaPrimerCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja h2 {
+    font-size: 12px;
+  }
+  main .contenedorAnimaciones .containterPrimerCaja div .columnaDerechaPrimerCaja p {
+    font-size: 10px;
+  }
+  main .contenedorAnimaciones section div .columnaIzquierdaSegundaCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones section div .columnaDerechaSegundaCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones section div .columnaDerechaSegundaCaja h2 {
+    font-size: 12px;
+  }
+  main .contenedorAnimaciones section div .columnaDerechaSegundaCaja ul {
+    font-size: 10px;
+  }
+  main .contenedorAnimaciones .containerTercerCaja div .columnaIzquierdaTercerCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja {
+    height: 30vh;
+  }
+  main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja h2 {
+    font-size: 12px;
+  }
+  main .contenedorAnimaciones .containerTercerCaja div .columnaDerechaTercerCaja ol {
+    font-size: 10px;
+  }
+}
+main section .contenedorTituloNosotros {
+  background-image: url(../assets/img/fondoNosotros2.jpg);
+}
+main section .contenedorTituloNosotros h1 {
+  font-weight: 900;
+  padding: 8rem;
+  font-size: 50px;
+}
+main div div .contenedorVideoNosotros {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+main div div .contenedorVideoNosotros video {
+  height: 35vh;
+  width: 100%;
+}
+main div div .contenedorTextoNosotros {
+  color: rgb(202, 99, 164);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+main div div .contenedorTextoNosotros h3 {
+  font-size: 20px;
+  font-weight: 200;
+}
+main .textoGaleriaNosotros {
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+main .textoGaleriaNosotros p {
+  color: rgb(202, 99, 164);
+  font-size: 25px;
+  font-weight: 700;
+}
+main .galeriaNosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+main .galeriaNosotros div .imagenes {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
+}
+main .galeriaNosotros div .imagenes img {
+  width: 100%;
+  height: 40vh;
+}
+main .galeriaNosotros div .imagenes a {
+  color: rgb(202, 99, 164);
+  font-weight: 700;
+}
+main .galeriaNosotros div .imagenes a:hover {
+  color: rgb(164, 196, 167);
+}
+main .galeriaNosotros div .videoNosotros {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
+}
+main .galeriaNosotros div .videoNosotros video {
+  width: 100%;
+  height: 50vh;
+}
+main .galeriaNosotros div .videoNosotros a {
+  color: rgb(202, 99, 164);
+  font-weight: 700;
+}
+main .galeriaNosotros div .videoNosotros a:hover {
+  color: rgb(164, 196, 167);
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main section .contenedorTituloNosotros {
+    height: 30vh;
+    background-image: url(../assets/img/fondoNosotros2\ copia.jpg);
+  }
+  main section .contenedorTituloNosotros h1 {
+    font-weight: 300;
+    padding: 8rem;
+    font-size: 25px;
+  }
+  main div div .contenedorVideoNosotros video {
+    height: 20vh;
+  }
+  main div div .contenedorTextoNosotros h3 {
+    font-size: 15px;
+    font-weight: 200;
+  }
+  main .textoGaleriaNosotros p {
+    font-size: 12px;
+  }
+  main .galeriaNosotros div .imagenes img {
+    height: 20vh;
+    object-fit: contain;
+  }
+  main .galeriaNosotros div .videoNosotros video {
+    height: 20vh;
+    object-fit: contain;
+  }
+}
+main section .contenedorTituloConsultorio {
+  background-image: url(../assets/img/fondoConsultorio.jpg);
+}
+main section .contenedorTituloConsultorio h1 {
+  font-weight: 900;
+  padding: 8rem;
+  font-size: 50px;
+}
+main .contenedorTextoConsultorio {
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorTextoConsultorio p {
+  font-weight: 300;
+  font-size: 20px;
+}
+main .textoGaleriaConsultorio {
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+main .textoGaleriaConsultorio h2 {
+  color: rgb(202, 99, 164);
+  font-size: 25px;
+  font-weight: 700;
+}
+main .contenedorGaleriaConsultorio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+main .contenedorGaleriaConsultorio .imagenesConsultorio {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
+}
+main .contenedorGaleriaConsultorio .imagenesConsultorio img {
+  width: 100%;
+  height: 40vh;
+}
+main .contenedorTextoConsultorio h2 {
+  font-weight: 700;
+  font-size: 25px;
+}
+main .contenedorTextoConsultorio .mapa {
+  width: 400px;
+  height: 450px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main section .contenedorTituloConsultorio {
+    height: 30vh;
+    background-image: url(../assets/img/fondoConsultorio\ copia.jpg);
+  }
+  main section .contenedorTituloConsultorio h1 {
+    font-weight: 300;
+    padding: 8rem;
+    font-size: 25px;
+  }
+  main .contenedorTextoConsultorio p {
+    font-size: 15px;
+  }
+  main .textoGaleriaConsultorio h2 {
+    font-size: 12px;
+  }
+  main .contenedorGaleriaConsultorio .imagenesConsultorio img {
+    height: 20vh;
+  }
+  main .contenedorTextoConsultorio h2 {
+    font-size: 12px;
+  }
+  main .contenedorTextoConsultorio .mapa {
+    height: 25vh;
+    width: 200px;
+  }
+}
+main section .contenedorTituloContacto {
+  background-image: url(../assets/img/fondocontacto.jpg);
+}
+main section .contenedorTituloContacto h1 {
+  font-weight: 900;
+  padding: 8rem;
+  font-size: 50px;
+}
+main .contenedorTextoContacto {
+  color: rgb(202, 99, 164);
+  text-align: center;
+}
+main .contenedorTextoContacto h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+main div .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main div .formulario ::placeholder {
+  color: rgb(202, 99, 164) !important;
+}
+main div .formulario .formularioContenedorBoton {
+  background-color: rgb(202, 99, 164);
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  main section .contenedorTituloContacto {
+    height: 30vh;
+    background-image: url(../assets/img/fondocontacto\ copia.jpg);
+    background-attachment: initial;
+  }
+  main section .contenedorTituloContacto h1 {
+    font-weight: 300;
+    padding: 8rem;
+    font-size: 25px;
+  }
+  main .contenedorTextoContacto h2 {
+    font-size: 12px;
+  }
+}
+.mainError {
+  background-image: url(../assets/img/fondo\ titulo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-position: center;
+  height: 100vh;
+}
+.mainError .contenedorTituloError {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.mainError .contenedorTituloError h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+.mainError .contenedorTituloError h2 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+.mainError .contenedorTituloError a {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 20px;
+}
+.mainError .contenedorTituloError a:hover {
+  color: rgb(164, 196, 167);
+}
+.mainError .contenedorTituloError .iconoError {
+  animation: rotating 2s linear;
+  animation-iteration-count: infinite;
+  color: rgb(202, 99, 164);
+  font-size: 100px;
+  margin-top: 10rem;
+}
+@keyframes rotating {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .mainError {
+    background-image: url(../assets/img/fondo\ titulo\ copia.jpg);
+  }
+  .mainError .contenedorTituloError h1 {
+    font-size: 25px;
+  }
+  .mainError .contenedorTituloError h2 {
+    font-size: 15px;
+  }
+  .mainError .contenedorTituloError a {
+    font-size: 15px;
+  }
+  .mainError .contenedorTituloError .iconoError {
+    font-size: 50px;
+  }
+}
+.footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(180, 226, 247);
+  height: auto;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.footer div div div a .iconos {
+  color: rgb(202, 99, 164);
+  font-size: 60px;
+  display: inline-block;
+  align-items: center;
+  padding: 1rem;
+}
+.footer div div div a .iconos:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.footer div .contactoFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer div .contactoFooter li a {
+  color: rgb(202, 99, 164);
+  font-weight: 800;
+}
+.footer div .contactoFooter li a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+.footer .contenedorCreditos {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .contenedorCreditos .creditos p {
+  color: rgb(255, 255, 255);
+}
+.footer .contenedorCreditos .creditos p:hover {
+  color: rgb(202, 99, 164);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer div div div a .iconos {
+    font-size: 35px;
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  .footer .contenedorCreditos {
+    padding-top: 0rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
