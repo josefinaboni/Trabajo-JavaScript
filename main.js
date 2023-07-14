@@ -1,4 +1,4 @@
-
+//PRRIMER PRE ENTREGA
 /*function carrito () {
     let suma = 0;
     let producto = prompt ("Ingrese el nombre del producto");
@@ -11,7 +11,8 @@
     console.log("El total de su compra es: $" + suma)
     }
     carrito ()*/
-    function SegundaEntrega () {
+    //SEGUNDA PRE ENTREGA
+    /*function SegundaEntrega () {
       const productos = [];
       let limite=3
       class Producto {
@@ -40,4 +41,16 @@
      const stock =productos.filter((el) => el.stock === "si");
      console.log("Los productos en stock son: " , stock);
     }
-    SegundaEntrega ()
+    SegundaEntrega ()*/
+
+    //TERCERA PRE ENTREGA
+
+    function TerceraEntrega() {
+      let boton = document.getElementsByClassName("carrito");
+      boton.onclick = () => {
+        let numero = document.getElementsByClassName("contador");
+        let resultado = parseInt(numero.innerHTML) + 1; //especifico que es un valor que esta en el HTML
+        numero.innerHTML = resultado; //le doy un nuevo valor a la variable numero
+      };
+    }
+    
