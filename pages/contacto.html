@@ -12,9 +12,9 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e3e85025d7.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Tienda - Soy mama y to</title>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Contacto - Soy mama y to</title>
 </head>
 
 <body class="body">
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
-          <img src="./assets/img/logo.png" alt="" width="100px" class="logo"></a>
+          <img src="../assets/img/logo.png" alt="" width="100px" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,19 +35,19 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link linkNav" href="./que es to.html">Qué es T.O</a>
+              <a class="nav-link linkNav" href="../que es to.html">Qué es T.O</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" href="./nosotros.html">Nosotros</a>
+              <a class="nav-link linkNav" href="../nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" href="./consultorio.html">Consultorio</a>
+              <a class="nav-link linkNav" href="../consultorio.html">Consultorio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" href="./pages/contacto.html">Contacto</a>
+              <a class="nav-link linkNav" href="#">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" href="#" >Tienda</a>
+              <a class="nav-link linkNav" href="../index.html" >Tienda</a>
             </li>
           </ul>
         </div>
@@ -56,62 +56,36 @@
 
   </header>
   <main>
-    <div class="galeriaNosotros ">
-      <div class=" row container d-flex justify-content-center">
-        <div class="imagenes col-lg-6 col-md12 col-sm-12" data-aos="flip-left">
-          <img src="./assets/img/juguetes1.webp" alt="plantilla 1">
-          <button class="nav-link d-flex justify-content-center" id="carrito">
-            AGREGAR AL CARRITO
-          </button>
-          <button class="nav-link d-flex justify-content-center" id="carritoQuitar">
-            QUITAR DEL  CARRITO
-          </button>
-          <p id="contador">
-            0
-          </p>
-         
-        </div>
-        <div class="imagenes col-lg-6 col-md12 col-sm-12" data-aos="flip-right" data-aos-offset="200">
-          <img src="./assets/img/jueguetes2.webp" alt="plantilla 2">
-          <button class="nav-link d-flex justify-content-center"id="carrito">
-            AGREGAR AL CARRITO
-          </button>
-          <button class="nav-link d-flex justify-content-center" id="carritoQuitar">
-            QUITAR DEL  CARRITO
-          </button>
-          <p id="contador">
-            0
-          </p>
-            
-            
-        </div>
-        <div class="imagenes col-lg-6 col-md12 col-sm-12" data-aos="flip-left" data-aos-offset="200">
-          <img src="./assets/img/juguetes3.webp" alt="plantilla 3">
-          <button class="nav-link d-flex justify-content-center"id="carrito">
-            AGREGAR AL CARRITO
-          </button>
-          <button class="nav-link d-flex justify-content-center" id="carritoQuitar">
-            QUITAR DEL  CARRITO
-          </button>
-          <p id="contador">
-            0
-          </p>
-        </div>
-        <div class="imagenes col-lg-6 col-md12 col-sm-12" data-aos="flip-left" data-aos-offset="200">
-          <img src="./assets/img/jugutes4.webp" alt="plantilla 3">
-          <button class="nav-link d-flex justify-content-center"id="carrito">
-            AGREGAR AL CARRITO
-          </button>
-          <button class="nav-link d-flex justify-content-center" id="carritoQuitar">
-            QUITAR DEL  CARRITO
-          </button>
-          <p id="contador">
-            0
-          </p>
-        </div>
-        
+    <div class="contenedorTextoContacto">
+        <h2>Completá el siguiente formulario y en breve atenderemos tu consulta</h2>
       </div>
-    </div>
+  
+  
+      <div class="container ">
+        <form class="row formulario" id="formulario">
+          <div class="col-md-6 col-sm-12">
+            <input type="text" class="form-control" id="nombredepaciente" placeholder="Nombre completo del paciente"
+              required>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <input type="number" class="form-control" id="edad" placeholder="Edad"
+              required>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <input type="text" class="form-control" id="nombredeladultoresponsasble"
+              placeholder="Nombre completo del adulto responsable" required>
+          </div>
+          <div class="col-md-6 col-sm-12 ">
+            <input type="email" class="form-control  " id="emailInput" placeholder="Email de contacto" required>
+          </div>
+          
+          <div class="col-md-6 col-sm-12">
+            
+            <input type="submit" value="Enviar formulario" class="form-control formularioContenedorBoton">
+            <input type="reset" class="form-control formularioContenedorBoton">
+          </div>
+        </form>
+      </div>
   </main>
   <footer class="footer container-fluid ">
     <div class=" d-flex justify-content-center">
@@ -143,7 +117,7 @@
   <script>
     AOS.init();
   </script>
-  <script  src= "./main.js"></script>
+  <script  src= "../contacto.js"></script>
 </body>
 
 </html>

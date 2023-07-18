@@ -1,0 +1,68 @@
+main {
+    section {
+        .contenedorTituloContacto {
+            @extend .contenedorTituloIndex;
+            background-image: url(../assets/img/fondocontacto.jpg);
+
+            h1 {
+                font-weight: map-get($fuentes, black);
+                padding: 8rem;
+                font-size: $tamano-titulo;
+            }
+        }
+    }
+
+    .contenedorTextoContacto {
+        color: $color-texto;
+        text-align: center;
+
+        h2 {
+            font-size: $titulo-cards;
+            font-weight: map-get($fuentes, bold);
+        }
+    }
+
+    div {
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            ::placeholder {
+                color:  rgb(202, 99, 164) !important;
+            }
+
+            .formularioContenedorBoton {
+                background-color: rgb(202, 99, 164);
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width:768px) {
+    main {
+        section{
+        .contenedorTituloContacto {
+            height: 30vh;
+            background-image: url(../assets/img/fondocontacto\ copia.jpg);
+            background-attachment: initial;
+
+            h1 {
+                font-weight: 300;
+                padding: 8rem;
+                font-size: 25px;
+            }
+        }
+        }
+
+        .contenedorTextoContacto {
+            h2 {
+                font-size: 12px;
+
+            }
+        }
+    }
+}
