@@ -63,13 +63,32 @@ function Proyecto() {
     let resultado = parseInt(numero.innerHTML) - 1; //especifico que es un valor que esta en el HTML
     numero.innerHTML = resultado; //le doy un nuevo valor a la variable numero
   };
-  localStorage.setItem('productos', JSON.stringify(productos))
+  localStorage.setItem("productos", JSON.stringify(productos));
   let carritoLocalStorage = JSON.parse(localStorage.getItem("productos"));
   if (carritoLocalStorage) {
     carrito = carritoLocalStorage;
   } else {
     productos = [];
   }
- 
+}
+
+function Data() {
+  const contenedorProductos = document.querySelector("#contenedorProductos"); //este es el contenedor de todos los prodcutos
+  console.log(contenedorProductos);
+  const mostrarProductos = (data) => {
+    data.forEach((producto) => {
+      const cardProducto = document.createElement("div"); //contenedor de cada uno de loss productos
+      cardProducto.setAttribute("id", "tarjeta-Producto"); //le doy atributos para despues trabajarlo con css
+      cardProducto.innerHTML = ` 
+      <img  class= "prod-img" src="${producto?.img}" alt="${producto?.nombre}" style = "width:75px"/>
+      <div class= "prod-description">
+          <h5> ${producto?.nombre} </h5>
+        <button id = "${producto?.id}"> COMPRAR </button>
+      </div>
+      `;
+      contenedorProductos.appendChild(cardProducto);
+    });
+  };
+  mostrarProductos (productos);
  
 }
