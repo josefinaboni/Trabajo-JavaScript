@@ -12,7 +12,7 @@
     }
     carrito ()*/
 //SEGUNDA PRE ENTREGA
-function Proyecto() {
+/*function Proyecto() {
   const productos = [];
   let limite = 3;
   class Producto {
@@ -70,7 +70,7 @@ function Proyecto() {
   } else {
     productos = [];
   }
-}
+}*/
 
 function Data() {
   const contenedorProductos = document.querySelector("#contenedorProductos"); //este es el contenedor de todos los prodcutos
@@ -83,12 +83,48 @@ function Data() {
       <img  class= "prod-img" src="${producto?.img}" alt="${producto?.nombre}" style = "width:75px"/>
       <div class= "prod-description">
           <h5> ${producto?.nombre} </h5>
-        <button id = "${producto?.id}"> COMPRAR </button>
+          <h3> ${producto?.precio} </h3>
+        <button id = "${producto?.id}" class = "boton"> AGREGAR AL CARRITO </button>
       </div>
       `;
+      contenedorProductos.style.padding = "20px";
+      contenedorProductos.style.margin = "15px";
       contenedorProductos.appendChild(cardProducto);
     });
   };
-  mostrarProductos (productos);
- 
+  mostrarProductos(productos);
+  const carrito = [];
+  let botones = document.getElementsByClassName("boton");
+  for (const boton of botones) {
+    boton.onclick = (e) => {
+      let productoSeleccionado = productos.find(
+        (producto) => producto.id === parseInt(e.target.id)
+      );
+      console.log(`Se agrego ${productoSeleccionado.nombre}`)
+      carrito.push(productoSeleccionado);
+      console.log(carrito);
+    };
+  }
+  let contenedorBotonFinalizar = document.getElementById(
+    "contenedorBotonFinalizar"
+  );
+  let botonFinalizar = document.createElement("button");
+  botonFinalizar.innerText = "Finalizar compra";
+  contenedorBotonFinalizar.appendChild(botonFinalizar);
+  botonFinalizar.onclick = () => {
+    console.log(`Unidades en el carrito: ${carrito.length}`);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  };
+  let contenedorBotonVerCarrito = document.getElementById("contenedorBotonVerCarrito")
+  let botonVerCarrito= document.createElement("button");
+  botonVerCarrito.innerText= "Ver Carrito";
+  contenedorBotonVerCarrito.appendChild(botonVerCarrito);
+  botonVerCarrito.onclick= () => {
+    const carritoLocalStorage =JSON.parse (localStorage.getItem ("carrito"))
+    /*console.log (carritoLocalStorage)*/
+    let contenedorCarrito = document.createElement ("div");
+    contenedorCarrito.body.appendChild(carritoLocalStorage)
+  }
 }
+Data();
+
