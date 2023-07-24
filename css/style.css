@@ -530,6 +530,8 @@ main div .formulario .formularioContenedorBoton {
   font-size: 100px;
   margin-top: 10rem;
 }
+
+
 @keyframes rotating {
   to {
     transform: rotate(360deg);

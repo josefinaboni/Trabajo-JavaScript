@@ -121,9 +121,11 @@ function Data() {
   contenedorBotonVerCarrito.appendChild(botonVerCarrito);
   botonVerCarrito.onclick= () => {
     const carritoLocalStorage =JSON.parse (localStorage.getItem ("carrito"))
-    /*console.log (carritoLocalStorage)*/
-    let contenedorCarrito = document.createElement ("div");
-    contenedorCarrito.body.appendChild(carritoLocalStorage)
+    console.log (carritoLocalStorage)
+    const nombreProductos = carritoLocalStorage.map((producto) => producto.nombre ) 
+    console.log (nombreProductos)  
+     /*et contenedorCarrito = document.createElement ("div");
+    contenedorCarrito.body.appendChild(carritoLocalStorage)*/
   }
 }
 Data();
