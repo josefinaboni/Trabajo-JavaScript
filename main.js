@@ -106,8 +106,6 @@ function Data() {
         text: `${productoSeleccionado.nombre}, precio: ${productoSeleccionado.precio}`,
         buttons: ["Cancelar", "Aceptar"],
       }).then((respuesta) => {
-        console.log(respuesta);
-
         if (respuesta) {
           carrito.push(productoSeleccionado);
 
@@ -146,17 +144,18 @@ function Data() {
   let botonVerCarrito = document.createElement("button");
   botonVerCarrito.innerText = "Ver Carrito";
   contenedorBotonVerCarrito.appendChild(botonVerCarrito);
-  let suma= 0
-  suma =suma + producto.map ((p) => p.precio);
+  let suma= 0;
+  
   botonVerCarrito.onclick = () => {
     const carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+    suma = carritoLocalStorage.reduce((total, producto) => total + producto.precio, 0);
     //console.log(carritoLocalStorage);
     swal({
       title: "Su carrito",
 
       text: `${carritoLocalStorage
-        .map((p) => `Producto: ${p.nombre}, Precio: ${p.precio}, Total : ${suma}`)
-        .join("\n")}`, 
+        .map((p) => `Producto: ${p.nombre}, Precio: ${p.precio}`)
+        .join("\n")}, Total : ${suma}`, 
       buttons: ["Cancelar", "Aceptar"],
     })
     const nombreProductos = carritoLocalStorage.map(
