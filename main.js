@@ -100,9 +100,20 @@ function Data() {
       let productoSeleccionado = productos.find(
         (producto) => producto.id === parseInt(e.target.id)
       );
-      console.log(`Se agrego ${productoSeleccionado.nombre}`)
-      carrito.push(productoSeleccionado);
-      console.log(carrito);
+      swal({
+        title: "Desea agregar el producto al carrito?",
+
+        text: `${productoSeleccionado.nombre}, precio: ${productoSeleccionado.precio}`,
+        buttons: ["Cancelar", "Aceptar"],
+      }).then((respuesta) => {
+        console.log(respuesta);
+
+        if (respuesta) {
+          carrito.push(productoSeleccionado);
+
+          console.log(carrito);
+        }
+      });
     };
   }
   let contenedorBotonFinalizar = document.getElementById(
@@ -112,21 +123,46 @@ function Data() {
   botonFinalizar.innerText = "Finalizar compra";
   contenedorBotonFinalizar.appendChild(botonFinalizar);
   botonFinalizar.onclick = () => {
-    console.log(`Unidades en el carrito: ${carrito.length}`);
+    swal({
+      title: "Desea confirmar la compra?",
+
+      text: `${carrito
+        .map((p) => `Producto: ${p.nombre}, Precio: ${p.precio}`)
+        .join("\n")}`,
+
+      buttons: ["Cancelar", "Aceptar"],
+    }).then((respuesta) => {
+      if (respuesta) {
+        swal({
+          title: "Tu compra ha sido exitosa!",
+        })
+      }
+    });
     localStorage.setItem("carrito", JSON.stringify(carrito));
   };
-  let contenedorBotonVerCarrito = document.getElementById("contenedorBotonVerCarrito")
-  let botonVerCarrito= document.createElement("button");
-  botonVerCarrito.innerText= "Ver Carrito";
+  let contenedorBotonVerCarrito = document.getElementById(
+    "contenedorBotonVerCarrito"
+  );
+  let botonVerCarrito = document.createElement("button");
+  botonVerCarrito.innerText = "Ver Carrito";
   contenedorBotonVerCarrito.appendChild(botonVerCarrito);
-  botonVerCarrito.onclick= () => {
-    const carritoLocalStorage =JSON.parse (localStorage.getItem ("carrito"))
-    console.log (carritoLocalStorage)
-    const nombreProductos = carritoLocalStorage.map((producto) => producto.nombre ) 
-    console.log (nombreProductos)  
-     /*et contenedorCarrito = document.createElement ("div");
-    contenedorCarrito.body.appendChild(carritoLocalStorage)*/
-  }
+  let suma= 0
+  suma =suma + producto.map ((p) => p.precio);
+  botonVerCarrito.onclick = () => {
+    const carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+    //console.log(carritoLocalStorage);
+    swal({
+      title: "Su carrito",
+
+      text: `${carritoLocalStorage
+        .map((p) => `Producto: ${p.nombre}, Precio: ${p.precio}, Total : ${suma}`)
+        .join("\n")}`, 
+      buttons: ["Cancelar", "Aceptar"],
+    })
+    const nombreProductos = carritoLocalStorage.map(
+      (producto) => producto.nombre
+    );
+    console.log(nombreProductos);
+  };
 }
 Data();
-
