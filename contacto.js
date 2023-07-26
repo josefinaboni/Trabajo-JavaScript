@@ -15,7 +15,7 @@ miFormulario.addEventListener('submit', (e) => {
     localStorage.setItem('usuario', JSON.stringify(usuario))
 })
 
-let botonEnviar= document.getElementsByClassName ("formularioContenedorBoton") 
+let botonEnviar= document.getElementById ("contenedorBoton") 
 
 botonEnviar.onclick = () => {
     swal({

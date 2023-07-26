@@ -107,7 +107,11 @@ function Data() {
         buttons: ["Cancelar", "Aceptar"],
       }).then((respuesta) => {
         if (respuesta) {
-          carrito.push(productoSeleccionado);
+          carrito.push({
+            id: productoSeleccionado.id,
+            nombre: productoSeleccionado.nombre,
+            precio: productoSeleccionado.precio,
+          });
 
           console.log(carrito);
         }
@@ -148,8 +152,11 @@ function Data() {
   
   botonVerCarrito.onclick = () => {
     const carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-    suma = carritoLocalStorage.reduce((total, producto) => total + producto.precio, 0);
+    suma = carritoLocalStorage.reduce(
+      (total, producto) => total + parseFloat(producto.precio),
+      0);
     //console.log(carritoLocalStorage);
+    
     swal({
       title: "Su carrito",
 
