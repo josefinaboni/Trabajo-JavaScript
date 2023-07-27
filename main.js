@@ -75,11 +75,32 @@
 function Data() {
   const contenedorProductos = document.querySelector("#contenedorProductos"); //este es el contenedor de todos los prodcutos
   console.log(contenedorProductos);
-  const mostrarProductos = (data) => {
-    data.forEach((producto) => {
-      const cardProducto = document.createElement("div"); //contenedor de cada uno de loss productos
-      cardProducto.setAttribute("id", "tarjeta-Producto"); //le doy atributos para despues trabajarlo con css
-      cardProducto.innerHTML = ` 
+  function obtenerProductos() {
+    return new Promise((resolve, reject) => {
+      const num = Math.random();
+
+      setTimeout(() => {
+        if (num > 0.1) {
+          resolve(productos);
+        } else {
+          reject("Ha ocurrido un error");
+        }
+      }, 2000);
+    });
+  }
+
+  let spinner = document.getElementById("spinner");
+
+  spinner.style.display = "block";
+  obtenerProductos()
+    .then((productos) => {
+      spinner.style.display = "none";
+
+      const mostrarProductos = (data) => {
+        data.forEach((producto) => {
+          const cardProducto = document.createElement("div"); //contenedor de cada uno de loss productos
+          cardProducto.setAttribute("id", "tarjeta-Producto"); //le doy atributos para despues trabajarlo con css
+          cardProducto.innerHTML = ` 
       <img  class= "prod-img" src="${producto?.img}" alt="${producto?.nombre}" style = "width:75px"/>
       <div class= "prod-description">
           <h5> ${producto?.nombre} </h5>
@@ -87,12 +108,19 @@ function Data() {
         <button id = "${producto?.id}" class = "boton"> AGREGAR AL CARRITO </button>
       </div>
       `;
-      contenedorProductos.style.padding = "20px";
-      contenedorProductos.style.margin = "15px";
-      contenedorProductos.appendChild(cardProducto);
+          contenedorProductos.style.padding = "20px";
+          contenedorProductos.style.margin = "15px";
+          contenedorProductos.appendChild(cardProducto);
+        });
+      };
+      mostrarProductos(productos);
+    })
+    .catch((error) => {
+      spinner.style.display = "none";
+
+      alert(error);
     });
-  };
-  mostrarProductos(productos);
+
   const carrito = [];
   let botones = document.getElementsByClassName("boton");
   for (const boton of botones) {
@@ -166,6 +194,5 @@ function Data() {
     );
     console.log(nombreProductos);
   };
-
 }
 Data();
