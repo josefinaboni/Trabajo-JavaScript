@@ -101,9 +101,9 @@ function Data() {
           const cardProducto = document.createElement("div"); //contenedor de cada uno de loss productos
           cardProducto.setAttribute("id", "tarjeta-Producto"); //le doy atributos para despues trabajarlo con css
           cardProducto.innerHTML = ` 
-      <img  class= "prod-img" src="${producto?.img}" alt="${producto?.nombre}" style = "width:75px"/>
-      <div class= "prod-description">
-          <h5> ${producto?.nombre} </h5>
+      <img  class= "prod-img img" src="${producto?.img}" alt="${producto?.nombre}" />
+      <div class= "prod-description imagenes col-lg-6 col-md12 col-sm-12">
+          <h5 class="nombre"> ${producto?.nombre} </h5>
           <h3> ${producto?.precio} </h3>
         <button id = "${producto?.id}" class = "boton"> AGREGAR AL CARRITO </button>
       </div>
@@ -114,12 +114,6 @@ function Data() {
         });
       };
       mostrarProductos(productos);
-    })
-    .catch((error) => {
-      spinner.style.display = "none";
-
-      alert(error);
-    });
 
   const carrito = [];
   let botones = document.getElementsByClassName("boton");
@@ -146,6 +140,7 @@ function Data() {
       });
     };
   }
+
   let contenedorBotonFinalizar = document.getElementById(
     "contenedorBotonFinalizar"
   );
@@ -194,5 +189,12 @@ function Data() {
     );
     console.log(nombreProductos);
   };
+    })
+    .catch((error) => {
+      spinner.style.display = "none";
+
+      alert(error);
+    });
+
 }
 Data();

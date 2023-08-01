@@ -61,6 +61,7 @@ main section .contenedorTituloIndex, main section .contenedorTituloContacto, mai
   background-attachment: initial;
   background-position: center;
 }
+
 main section .contenedorTituloIndex h1, main section .contenedorTituloContacto h1, main section .contenedorTituloConsultorio h1, main section .contenedorTituloNosotros h1, main section .contenedorTituloQue h1 {
   font-weight: 900;
   padding: 8rem;
@@ -613,5 +614,33 @@ main div .formulario .formularioContenedorBoton {
     padding-top: 0rem;
   }
 }
+#tarjeta-Producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-left: 300px;
+}
+.img {
+  width: 50%;
+  height: 50vh;
+}
+.imagenes{
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.nombre{
+  color: rgb(202, 99, 164);
+  font-size: 50px;
+  font-weight: 700;
+}
 
+ 
 /*# sourceMappingURL=style.css.map */
