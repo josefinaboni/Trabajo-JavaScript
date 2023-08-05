@@ -1,0 +1,170 @@
+main {
+    section {
+        .contenedorTituloNosotros {
+            @extend .contenedorTituloIndex;
+            background-image: url(../assets/img/fondoNosotros2.jpg);
+            
+            h1 {
+                font-weight: map-get($fuentes, black);
+                padding: 8rem;
+                font-size: $tamano-titulo;
+            }
+        }
+    }
+
+    div {
+        div {
+            .contenedorVideoNosotros {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                background-color: $fondo-cards;
+
+                video {
+                    height: 35vh;
+                    width: 100%;
+
+                }
+            }
+
+            .contenedorTextoNosotros {
+                color: $color-texto;
+                background-color: $fondo-cards;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+
+                h3 {
+                    font-size: $tamano-texto-secundario;
+                    font-weight: map-get($fuentes, thin)
+                }
+            }
+
+        }
+    }
+
+    .textoGaleriaNosotros {
+        margin-top: 3rem;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: $color-texto;
+            font-size: $titulo-cards;
+            font-weight: map-get($fuentes, bold);
+        }
+    }
+
+    .galeriaNosotros {
+        @include flexboxSinH (center, center, column, );
+        overflow: hidden;
+        div{
+            .imagenes {
+                background-color: $fondo-cards;
+                padding: 1rem 2rem 1rem 2rem;
+                margin: 1rem;
+                
+    
+                img {
+                    width: 100%;
+                    height: 40vh;
+                }
+                a{
+                    color: $color-texto;
+                    font-weight: map-get($fuentes, bold);
+                    &:hover{
+                        color: rgb(164, 196, 167);
+                    }
+                }
+            }
+            
+            .videoNosotros {
+                display: flex;
+                flex-direction: column;
+                background-color: $fondo-cards;
+                padding: 1rem 2rem 1rem 2rem;
+                margin: 1rem;
+    
+                video {
+                    width: 100%;
+                    height: 50vh;
+                }
+                a{
+                    color: $color-texto;
+                    font-weight: map-get($fuentes, bold);
+                    &:hover{
+                        color: rgb(164, 196, 167);
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 0px) and (max-width:768px) {
+    main {
+        section {
+            .contenedorTituloNosotros {
+                height: 30vh;
+                background-image: url(../assets/img/fondoNosotros2\ copia.jpg);
+
+                h1 {
+                    font-weight: 300;
+                    padding: 8rem;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        div {
+            div {
+                .contenedorVideoNosotros {
+                    video {
+                        height: 20vh;
+                    }
+                }
+
+                .contenedorTextoNosotros {
+
+                    h3 {
+                        font-size: 15px;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        .textoGaleriaNosotros {
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .galeriaNosotros {
+
+
+            div {
+                .imagenes {
+
+                    img {
+                        
+                        height: 20vh;
+                        object-fit: contain;
+                    }
+                        
+                }
+
+
+                .videoNosotros {
+
+                    video {
+                        height: 20vh;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
