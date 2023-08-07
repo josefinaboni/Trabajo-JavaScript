@@ -25,6 +25,7 @@ let contenedorOpiniones = document.getElementById(
         const fotos = await obtenerComentarios();
     
         for (const post of fotos) {
+          let contenedorCardsOpiniones= document.getElementById("contenedorCardsOpiniones")
           let contenedor = document.createElement("div");
     
           contenedor.innerHTML = `
@@ -40,7 +41,7 @@ let contenedorOpiniones = document.getElementById(
     
           contenedor.style.width = "18rem";
     
-          document.body.appendChild(contenedor);
+          contenedorCardsOpiniones.appendChild(contenedor);
         }
       }
     
