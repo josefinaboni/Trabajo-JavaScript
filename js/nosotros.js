@@ -5,13 +5,9 @@ let contenedorOpiniones = document.getElementById(
   botonVerOpiniones.innerText = "Ver opiniones de pacientes";
   contenedorOpiniones .appendChild(botonVerOpiniones);
   
-  let contenedorCerrarOpiniones = document.getElementById(
-    "contenedorCerrarOpiniones"
-  );
-  let botonCerrarOpiniones = document.createElement("button");
-  botonCerrarOpiniones.innerText = "Cerrar opiniones de pacientes";
-  contenedorCerrarOpiniones .appendChild(botonCerrarOpiniones);
-  
+
+ 
+
   botonVerOpiniones.onclick = () => {
     async function obtenerComentarios() {
         const response = await fetch("https://jsonplaceholder.typicode.com/comments");
@@ -37,7 +33,7 @@ let contenedorOpiniones = document.getElementById(
       
             `;
     
-          contenedor.className = "imagenes d-flex justify-content-center";
+          contenedor.className = " card p-2 m-2 col-sm-12 col-md-4 ";
     
           contenedor.style.width = "18rem";
     
@@ -46,9 +42,8 @@ let contenedorOpiniones = document.getElementById(
       }
     
       mostrarComentarios();
+      let deslizar =document.getElementById ("deslice");
+      deslizar.innerText="Deslizar hacia la derecha";
+      deslizar.className = "d-flex justify-content-center resaltadoDos";
+      
   };
-
-  botonCerrarOpiniones.onclick = () => {
-    mostrarComentarios().style.display = "none";
-  };
-  

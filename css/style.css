@@ -9,7 +9,10 @@
   font-weight: 700;
   color: rgb(164, 196, 167);
 }
-
+.resaltadoDos {
+  font-weight: 700;
+  color: rgb(202, 99, 164);
+}
 .resaltadoP {
   font-weight: 700;
 }
@@ -304,8 +307,8 @@ main .galeriaNosotros {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  overflow: hidden;
+  flex-direction: row;
+  overflow:auto;
 }
 main .galeriaNosotros div .imagenes {
   background-color: rgb(255, 255, 255);
@@ -641,13 +644,14 @@ main div .formulario .formularioContenedorBoton {
   font-size: 50px;
   font-weight: 700;
 }
-.galeriaNosotros {
+/*.galeriaNosotros {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
-}
+  
+}*/
 
  
 /*# sourceMappingURL=style.css.map */
